@@ -17,9 +17,12 @@ To create a form :
 
 1-	Instantiate a new object with the « Form » class wherever you want in your HTML, and make sure to its parameters. Parameter 1 is the name of the form, Parameter 2 is the method used with the form ( GET, POST, etc ), Parameter 3 is optional, and let you choose the form’s action.
 
-Exemple : `$newForm = new Form('test','POST');`
+Exemple```
+$newForm = new Form('test','POST');```
  
 2-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). 
 
-Exemple : `echo $newForm->formStart()->label('Name','Name')->input('Name', 'text')->label('Surname','Surname')->input('Surname', 'text')->label('Email','Email')->input('Email', 'email')->label('Password','Password')->input('Password', 'password')->select('Choice', $select)->textarea('Message')->checkbox('check','check', 'Check-me !')->radio('testRadio', $testGroup)->groupCheckbox($testGroup)->submitButton('Submit')->formEnd();`
+Exemple```
+echo $newForm->formStart()->label('Name','Name')->input('Name', 'text')->label('Surname','Surname')->input('Surname', 'text')->label('Email','Email')->input('Email', 'email')->label('Password','Password')->input('Password', 'password')->select('Choice', $select)->textarea('Message')->checkbox('check','check', 'Check-me !')->radio('testRadio', $testGroup)->groupCheckbox($testGroup)->submitButton('Submit')->formEnd();
+```
 
