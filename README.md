@@ -24,14 +24,14 @@ To create a form :
    **Parameter 3** is optional, and let you choose the form’s action.
 
 Exemple
-```
+```php
 $newForm = new Form('test','POST');
 ```
  
 2-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). 
 
 Exemple
-```
+```php
 echo $newForm->formStart()
  ->label('Name','Name')->input('Name', 'text')
  ->label('Surname','Surname')->input('Surname', 'text')
