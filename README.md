@@ -36,17 +36,17 @@ $newForm = new Form('test','POST');
 
 Exemple
 ```php
-echo $newForm->formStart() // Always start like this
- ->label('Name','Name')->input('Name', 'text')
- ->label('Surname','Surname')->input('Surname', 'text')
- ->label('Email','Email')->input('Email', 'email')
- ->label('Password','Password')->input('Password', 'password')
- ->select('Choice', $select)
- ->textarea('Message')
- ->checkbox('check','check', 'Check-me !')
- ->radio('testRadio', $testGroup)
- ->groupCheckbox($testGroup)
- ->submitButton('Submit')
-->formEnd(); // Always end like this
+echo $newForm->formStart() // Always starts like this
+        ->label('Name','Name')->input('Name', 'text')
+        ->label('Surname','Surname')->input('Surname', 'text')
+        ->label('Email','Email')->input('Email', 'email')
+        ->label('Password','Password')->input('Password', 'password')
+        ->select('Choice', $select)
+        ->textarea('Message')
+        ->checkbox('check','check', 'Check-me !')
+        ->radio('testRadio', $testGroup)
+        ->groupCheckbox($testGroup)
+    ->submitButton('Submit')
+->formEnd(); // Always ends like this
 ```
 
