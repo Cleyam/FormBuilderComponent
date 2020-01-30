@@ -32,7 +32,7 @@ $newForm = new Form('test','POST');
 
 Exemple
 ```php
-echo $newForm->formStart()
+echo $newForm->formStart() // Always start like this
  ->label('Name','Name')->input('Name', 'text')
  ->label('Surname','Surname')->input('Surname', 'text')
  ->label('Email','Email')->input('Email', 'email')
@@ -43,6 +43,6 @@ echo $newForm->formStart()
  ->radio('testRadio', $testGroup)
  ->groupCheckbox($testGroup)
  ->submitButton('Submit')
-->formEnd();
+->formEnd(); // Always end like this
 ```
 
