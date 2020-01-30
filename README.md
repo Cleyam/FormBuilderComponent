@@ -26,6 +26,17 @@ $newForm = new Form('test','POST');
 
 Exemple
 ```
-echo $newForm->formStart()->label('Name','Name')->input('Name', 'text')->label('Surname','Surname')->input('Surname', 'text')->label('Email','Email')->input('Email', 'email')->label('Password','Password')->input('Password', 'password')->select('Choice', $select)->textarea('Message')->checkbox('check','check', 'Check-me !')->radio('testRadio', $testGroup)->groupCheckbox($testGroup)->submitButton('Submit')->formEnd();
+echo $newForm->formStart()
+ ->label('Name','Name')->input('Name', 'text')
+ ->label('Surname','Surname')->input('Surname', 'text')
+ ->label('Email','Email')->input('Email', 'email')
+ ->label('Password','Password')->input('Password', 'password')
+ ->select('Choice', $select)
+ ->textarea('Message')
+ ->checkbox('check','check', 'Check-me !')
+ ->radio('testRadio', $testGroup)
+ ->groupCheckbox($testGroup)
+ ->submitButton('Submit')
+->formEnd();
 ```
 
