@@ -4,9 +4,9 @@ This PHP class will help you easily create HTML forms with a Bootstrap 4.4 layou
 
 ## **How to setup**
 
-Copy the /vendor directory inside your project.
+* Copy the /vendor directory inside your project.
 
-To benefit from Bootstrap 4.4 layouts, make sure to use the following CDN for Bootstrap & JQuery :
+* To benefit from Bootstrap 4.4 layouts, make sure to use the following CDN for Bootstrap & JQuery :
 -	https//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css
 -	https//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js
 -	https//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
