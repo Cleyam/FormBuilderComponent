@@ -1,8 +1,8 @@
-**PHP Form Builder with Bootstrap by Cleyam**
+# **PHP Form Builder with Bootstrap by Cleyam**
 
 This PHP class will help you easily create HTML forms with a Bootstrap 4.4 layout. The class has built-in fluent methods to ease the creation of any kind of forms, with default layouts which can still be personalized.
 
-**How to setup**
+## **How to setup**
 
 Make sure to use the following CDN for Bootstrap & JQuery :
 -	https//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css
@@ -11,7 +11,7 @@ Make sure to use the following CDN for Bootstrap & JQuery :
 
 or to use the libraries provided in the /libs directory.
 
-**Working with the Form Builder**
+## **Working with the Form Builder**
 
 To create a form :
 
