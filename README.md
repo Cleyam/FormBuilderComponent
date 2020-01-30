@@ -15,11 +15,13 @@ or to use the libraries provided in the /libs directory.
 
 To create a form :
 
-1-	Instantiate a new object with the « Form » class wherever you want in your HTML, and make sure to set its parameters. Parameter 1 is the name of the form.
+1-	Instantiate a new object with the « Form » class wherever you want in your HTML, and make sure to set its parameters.
 
-Parameter 2 is the method used with the form ( GET, POST, etc ).
+**Parameter 1** is the name of the form.
 
-Parameter 3 is optional, and let you choose the form’s action.
+**Parameter 2** is the method used with the form ( GET, POST, etc ).
+
+**Parameter 3** is optional, and let you choose the form’s action.
 
 Exemple
 ```
