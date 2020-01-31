@@ -52,15 +52,14 @@ echo $newForm->formStart() // Always starts like this
 
 ## **Methods & options**
 
-
-
-<<<<<<< HEAD
 * #### formStart
 This method is **mandatory** and **must be used first**. You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
-=======
-#### formStart
+
+
+* #### formStart
 You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
 >>>>>>> master
+
 
 `cardCSS` - Default is 'card mx-2 my-2'
 
@@ -78,6 +77,7 @@ This method is **mandatory** and **must be used last**. It doesn't take any para
 
 * #### input
 This method let you build an input in your form. The `name` and `type` parameters must be set.
+
 `name` - Must be set. 
 
 `type` - Must be set ( text, email, password, hidden, etc )
@@ -91,6 +91,7 @@ This method let you build an input in your form. The `name` and `type` parameter
 
 * #### label
 This method let you build an label in your form. The `name` and `for` parameters must be set.
+
 `name` - Must be set. 
 
 `for` - Must be set ( You'll need to make it identical to the input's id it is linked to )
@@ -100,6 +101,7 @@ This method let you build an label in your form. The `name` and `for` parameters
 
 * #### submitButton
 This method let you build an submit button in your form. The `name` parameter must be set.
+
 `name` - Must be set. 
 
 `submitCss` - 'btn btn-dark float-right mt-2' by default.
@@ -107,6 +109,7 @@ This method let you build an submit button in your form. The `name` parameter mu
 
 * #### select
 This method let you build an select input with as many options as you want in your form. The `name` and `options` parameters must be set.
+
 `name` - Must be set. 
 
 `options` - Must be set and be an array, containing all the options you want in your select input.
@@ -114,6 +117,7 @@ This method let you build an select input with as many options as you want in yo
 
 * #### textarea
 This method let you build an text area in your form. The `name` parameter must be set.
+
 `name` - Must be set. 
 
 `placeholder` - Empty by default.
@@ -125,6 +129,7 @@ This method let you build an text area in your form. The `name` parameter must b
 
 * #### checkbox
 This method let you build an checkbox in your form. The `name` and `label` parameters must be set.
+
 `name` - Must be set. 
 
 `label` - Must be set. 
@@ -138,6 +143,7 @@ This method let you build an checkbox in your form. The `name` and `label` param
 
 * #### groupCheckbox
 This method let you build an group checkbox input in your form. The `idLabelCheckbox` parameter must be set.
+
 `idLabelCheckbox` - Must be set. It must be an array with keys and values. The keys will set id for each inputs, and the for attribute for corresponding labels. The values will set the name attribute of each input, and what text is displayed by each label.
 
 `groupCheckboxInputCss` - 'form-check-input' by default.
@@ -147,6 +153,7 @@ This method let you build an group checkbox input in your form. The `idLabelChec
 
 * #### radio
 This method let you build an radio input in your form. The `name` and `idLabelRadio` parameters must be set.
+
 `name` - Must be set. 
 
 `idLabelRadio` - Must be set. It must be an array with keys and values. The keys will set id and value for each inputs, and the for attribute for corresponding labels. The values will set the name attribute of each input, and what text is displayed by each label.
