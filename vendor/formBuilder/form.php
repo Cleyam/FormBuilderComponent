@@ -29,14 +29,15 @@ class Form
     }
 
     /**
-     * Starts the form
+     * Starts the form.
      *
      * @param string $cardCss
      * @param string $cardHeaderCss
+     * @param string $cardBodyCss
      * @param string $formCss
-     * @return void
+     * @return self
      */
-    public function formStart($cardCss = 'card mx-2 my-2', $cardHeaderCss = 'card-header bg-dark text-white', $cardBodyCss = 'card-body', $formCss = 'mx-2 my-2')
+    public function formStart($cardCss = 'card mx-2 my-2', $cardHeaderCss = 'card-header bg-dark text-white', $cardBodyCss = 'card-body', $formCss = 'mx-2 my-2'): self
     {
         $formStart =  "<div class='$cardCss'><div class='$cardHeaderCss'>" . $this->getName() . "</div>
         <div class='$cardBodyCss'><form id='" . $this->getId() . "' name='" . $this->getName() . "' method='" . $this->getMethod() . "' action='" . $this->getAction() . "' class='$formCss'>";
@@ -45,11 +46,11 @@ class Form
     }
 
     /**
-     * Ends the form
+     * Ends the form.
      *
-     * @return void
+     * @return string
      */
-    public function formEnd()
+    public function formEnd(): string
     {
         return $this->form . "</form></div></div>";
     }
@@ -62,9 +63,9 @@ class Form
      * @param string $id
      * @param string $placeholder
      * @param string $inputCss
-     * @return void
+     * @return self
      */
-    public function input(string $name, $type, $id = '', $placeholder = '', $inputCss = 'form-control mr-2 mb-2')
+    public function input(string $name, $type, $id = '', $placeholder = '', $inputCss = 'form-control mr-2 mb-2'):self
     {
         $input = "<input name='$name' type='$type' class='$inputCss' id='$id' placeholder='$placeholder'>";
         $this->form .= $input;
@@ -76,36 +77,38 @@ class Form
      *
      * @param string $name
      * @param string $submitCss
-     * @return void
+     * @return self
      */
-    public function submitButton(string $name, $submitCss = 'btn btn-dark float-right mt-2')
+    public function submitButton(string $name, $submitCss = 'btn btn-dark float-right mt-2'):self
     {
         $button = "<button name='$name' type='submit' class='$submitCss'>$name</button>";
         $this->form .= $button;
         return $this;
     }
+
     /**
      * Generate a label
      *
      * @param string $text
      * @param [type] $for
      * @param string $labelCss
-     * @return void
+     * @return self
      */
-    public function label(string $text, $for, $labelCss = 'mr-2 mb-2')
+    public function label(string $text, $for, $labelCss = 'mr-2 mb-2'):self
     {
         $label = "<label class='$labelCss'for='$for'>$text</label>";
         $this->form .= $label;
         return $this;
     }
+
     /**
      * Generate a select form
      *
      * @param string $name
      * @param array $options
-     * @return void
+     * @return self
      */
-    public function select(string $name, array $options, $selectCss = 'form-control mr-2 mb-2')
+    public function select(string $name, array $options, $selectCss = 'form-control mr-2 mb-2'):self
     {
         $return = "<select class='$selectCss' name= '$name' id='$name'><option value='' disabled selected>$name</option>";
         foreach ($options as $option) {
@@ -122,9 +125,9 @@ class Form
      * @param string $placeholder
      * @param string $rows
      * @param string $textareaCss
-     * @return void
+     * @return self
      */
-    public function textarea($name, $placeholder = '', $rows = '5', $textareaCss = 'form-control mr-2 mb-2')
+    public function textarea($name, $placeholder = '', $rows = '5', $textareaCss = 'form-control mr-2 mb-2'):self
     {
         $textarea = "<textarea class='$textareaCss' name='$name' id='$name' rows='$rows' placeholder='$placeholder'></textarea>";
         $this->form .= $textarea;
@@ -138,9 +141,9 @@ class Form
      * @param [type] $label
      * @param string $checkboxInputCss
      * @param string $checkboxLabelCss
-     * @return void
+     * @return self
      */
-    public function checkbox($checkboxName, $checkboxId, $label, $checkboxInputCss = 'form-check-input', $checkboxLabelCss = 'form-check-label')
+    public function checkbox($checkboxName, $checkboxId, $label, $checkboxInputCss = 'form-check-input', $checkboxLabelCss = 'form-check-label'):self
     {
         $checkbox = "<input type='checkbox' class='$checkboxInputCss' name='$checkboxName' id='$checkboxId'>
         <label class='$checkboxLabelCss' for='$checkboxId'>$label</label>";
@@ -148,16 +151,16 @@ class Form
         $this->form .= $check;
         return $this;
     }
- /**
-  * Generate a group radio using a key/value array
-  *
-  * @param [type] $name
-  * @param array $idLabelRadio
-  * @param string $radioInputCss
-  * @param string $radioLabelCss
-  * @return void
-  */
-    public function radio($name, array $idLabelRadio, $radioInputCss='form-check-input', $radioLabelCss='form-check-label')
+    /**
+     * Generate a group radio using a key/value array
+     *
+     * @param [type] $name
+     * @param array $idLabelRadio
+     * @param string $radioInputCss
+     * @param string $radioLabelCss
+     * @return self
+     */
+    public function radio($name, array $idLabelRadio, $radioInputCss = 'form-check-input', $radioLabelCss = 'form-check-label'):self
     {
         $groupRadio = '';
         foreach ($idLabelRadio as $id => $label) {
@@ -169,15 +172,15 @@ class Form
         return $this;
     }
 
-/**
- * Generate a group checkbox using a key/value array
- *
- * @param array $idLabelCheckbox
- * @param string $groupCheckboxInputCss
- * @param string $groupCheckboxLabelCss
- * @return void
- */
-    public function groupCheckbox(array $idLabelCheckbox, $groupCheckboxInputCss='form-check-input', $groupCheckboxLabelCss='form-check-label')
+    /**
+     * Generate a group checkbox using a key/value array
+     *
+     * @param array $idLabelCheckbox
+     * @param string $groupCheckboxInputCss
+     * @param string $groupCheckboxLabelCss
+     * @return self
+     */
+    public function groupCheckbox(array $idLabelCheckbox, $groupCheckboxInputCss = 'form-check-input', $groupCheckboxLabelCss = 'form-check-label'):self
     {
         $groupCheckbox = '';
         foreach ($idLabelCheckbox as $id => $label) {
@@ -194,9 +197,9 @@ class Form
      *
      * @param [type] $element
      * @param [type] $tag
-     * @return void
+     * @return string
      */
-    public function wrap($element, $tag)
+    public function wrap($element, $tag):string
     {
         return "<$tag>$element</$tag>";
     }
