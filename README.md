@@ -58,8 +58,6 @@ This method is **mandatory** and **must be used first**. You don't have to set p
 
 * #### formStart
 You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
->>>>>>> master
-
 
 `cardCSS` - Default is 'card mx-2 my-2'
 
@@ -68,7 +66,7 @@ You don't have to set parameters if you want to use the default layout. The form
 `cardBodyCss` - Default is 'card-body'
 
 `formCss` - Default is 'mx-2 my-2'
-<<<<<<< HEAD
+
 
 
 * #### formEnd
