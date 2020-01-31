@@ -56,7 +56,7 @@ echo $newForm->formStart() // Always starts like this
 This method is **mandatory** and **must be used first**. You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
 
 
-#### formStart
+* #### formStart
 You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
 
 
