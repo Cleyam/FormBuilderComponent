@@ -56,7 +56,11 @@ echo $newForm->formStart() // Always starts like this
 
 #### formStart
 You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
+
 `cardCSS` - Default is 'card mx-2 my-2'
+
 `cardHeaderCss` - Default is 'card-header bg-dark text-white'
+
 `cardBodyCss` - Default is 'card-body'
+
 `formCss` - Default is 'mx-2 my-2'
