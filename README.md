@@ -21,18 +21,17 @@ To create a form :
 
 1-	Instantiate a new object with the « Form » class wherever you want in your HTML, and make sure to set its parameters.
 
-   **Parameter 1** is the name of the form.
-
-   **Parameter 2** is the method used with the form ( GET, POST, etc ).
-
-   **Parameter 3** is optional, and let you choose the form’s action.
+    `name: is the name of the form.`
+    `action: empty by default, submit to current url`
+    `method: POST by default`
+    `id:empty by default`
 
 Exemple
 ```php
-$newForm = new Form('test','POST');
+$newForm = new Form('test');
 ```
  
-2-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). 
+2-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). All methods are listed below, and are customizable if you don't want to keep the default Bootstrap layout.
 
 Exemple
 ```php
@@ -50,3 +49,14 @@ echo $newForm->formStart() // Always starts like this
 ->formEnd(); // Always ends like this
 ```
 
+
+## **Methods & options**
+
+
+
+#### formStart
+You don't have to set parameters if you want to use the default layout. The form attributes are already set when you instantiate the class, and will be automatically used here.
+`cardCSS` - Default is 'card mx-2 my-2'
+`cardHeaderCss` - Default is 'card-header bg-dark text-white'
+`cardBodyCss` - Default is 'card-body'
+`formCss` - Default is 'mx-2 my-2'
