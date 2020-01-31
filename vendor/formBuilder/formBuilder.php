@@ -1,8 +1,8 @@
 <?php
 
-namespace formBuilder;
+namespace FormBuilder;
 
-class Form
+class FormBuilder
 {
     protected $form;
     protected $name;
