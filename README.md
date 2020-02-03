@@ -19,7 +19,9 @@ This PHP class will help you easily create HTML forms with a Bootstrap 4.4 layou
 
 To create a form :
 
-1-	Instantiate a new object with the « Form » class wherever you want in your HTML, and make sure to set its parameters.
+1-  Require/Include/Autoload the FormBuilder class in your file.
+
+2-	Instantiate a new object with the FormBuilder class wherever you want in your HTML, and make sure to set its parameters.
 
     `name: is the name of the form.`
     `action: empty by default, submit to current url`
@@ -28,10 +30,10 @@ To create a form :
 
 Exemple
 ```php
-$newForm = new Form('test');
+$newForm = new FormBuilder('test');
 ```
  
-2-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). All methods are listed below, and are customizable if you don't want to keep the default Bootstrap layout.
+1-	To display the form in the HTML, start the next instruction with an echo, then use the fluent methods provided with the « Form » class in any order you want, starting with formStart() and ending with formEnd(). All methods are listed below, and are customizable if you don't want to keep the default Bootstrap layout.
 
 Exemple
 ```php
@@ -66,7 +68,6 @@ You don't have to set parameters if you want to use the default layout. The form
 `cardBodyCss` - Default is 'card-body'
 
 `formCss` - Default is 'mx-2 my-2'
-
 
 
 * #### formEnd
